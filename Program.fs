@@ -14,7 +14,8 @@ open Microsoft.FSharp.Linq
 
 let url = "http://ichart.finance.yahoo.com/table.csv?s="
 
-type dbSchema = SqlDataConnection<"Data Source=thebeast;Initial Catalog=FinancialData;Integrated Security=True">
+//type dbSchema = SqlDataConnection<"Data Source=thebeast;Initial Catalog=FinancialData;Integrated Security=True">
+type dbSchema = SqlDataConnection<"Data Source=GBD03821801\SQLEXPRESS;Initial Catalog=FinancialData;Integrated Security=True">
 let db = dbSchema.GetDataContext()
 
 let getStockPrices1 stock =
